@@ -382,8 +382,12 @@ Description: Hello Elementor child theme with custom Axion-style landing page (f
   text-transform: lowercase;
 }
 .ax-social a:hover { background: var(--ax-primary); color: #fff; }
-.ax-footer-bar { background: rgba(0,0,0,.25); padding: 20px 0; text-align: center; font-size: .85rem; }
+.ax-footer-bar { background: rgba(0,0,0,.25); padding: 20px 0; font-size: .85rem; }
+.ax-footer-bar-inner { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; }
 .ax-footer-bar p { margin: 0; color: rgba(255,255,255,.6); }
+.ax-footer-legal { display: flex; gap: 20px; }
+.ax-footer-legal a { color: rgba(255,255,255,.5); font-size: .85rem; }
+.ax-footer-legal a:hover { color: var(--ax-primary); }
 
 /* ==========================================================================
    RESPONSIVE
@@ -418,4 +422,168 @@ Description: Hello Elementor child theme with custom Axion-style landing page (f
   .ax-cta-row { flex-direction: column; align-items: stretch; }
   .ax-cta-row .ax-btn { width: 100%; }
   .ax-header-actions .ax-btn { display: none; }
+}
+
+/* ==========================================================================
+   NAV — ACTIVE STATE & DROPDOWN SUBMENUS
+   ========================================================================== */
+.ax-nav-list .is-active > a { color: var(--ax-primary); font-weight: 700; }
+.ax-nav-list .is-active > a::after {
+  content: ""; display: block; width: 100%; height: 2px;
+  background: var(--ax-primary); margin-top: 2px; border-radius: 2px;
+}
+.ax-has-sub { position: relative; }
+.ax-sub-menu {
+  display: none; position: absolute; top: calc(100% + 12px); left: 0;
+  background: #fff; min-width: 200px; border-radius: var(--ax-radius);
+  box-shadow: var(--ax-shadow-lg); border: 1px solid var(--ax-line);
+  padding: 8px 0; z-index: 200;
+}
+.ax-has-sub:hover .ax-sub-menu,
+.ax-has-sub:focus-within .ax-sub-menu { display: block; }
+.ax-sub-menu li { display: block; }
+.ax-sub-menu a {
+  display: block; padding: 10px 18px; color: var(--ax-ink-2);
+  font-size: .9rem; font-weight: 500; transition: background .15s ease;
+}
+.ax-sub-menu a:hover { background: var(--ax-bg-soft); color: var(--ax-primary); }
+
+/* ==========================================================================
+   INNER PAGE HERO
+   ========================================================================== */
+.ax-inner-hero {
+  background: linear-gradient(135deg, var(--ax-bg-dark) 0%, #0d2033 60%, var(--ax-primary-darker) 100%);
+  padding: 90px 0 100px; text-align: center; position: relative; overflow: hidden;
+}
+.ax-inner-hero::before {
+  content: ""; position: absolute; top: -100px; right: -100px;
+  width: 500px; height: 500px; border-radius: 50%;
+  background: radial-gradient(closest-side, rgba(14,165,192,.25), transparent 70%);
+}
+.ax-inner-hero-sm { padding: 60px 0 70px; }
+.ax-inner-hero-inner { position: relative; z-index: 1; }
+.ax-inner-hero .ax-eyebrow { background: rgba(14,165,192,.2); color: var(--ax-primary); }
+.ax-inner-hero h1 { color: #fff; margin-bottom: 16px; }
+.ax-inner-hero .ax-lead { color: rgba(255,255,255,.8); max-width: 640px; margin: 0 auto 28px; }
+.ax-bg-soft { background: var(--ax-bg-soft); }
+
+/* ==========================================================================
+   ABOUT PAGE
+   ========================================================================== */
+.ax-about-mission {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center;
+}
+.ax-about-mission-copy h2 { margin-bottom: 16px; }
+.ax-about-mission-copy p { color: var(--ax-muted); margin-bottom: 14px; }
+.ax-about-mission-copy .ax-btn { margin-top: 8px; }
+
+.ax-team-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 28px; }
+.ax-team-card { text-align: center; }
+.ax-placeholder-avatar { min-height: 200px; border-radius: 50%; max-width: 180px; margin: 0 auto 16px; }
+.ax-team-card h3 { margin-bottom: 4px; }
+.ax-team-role { color: var(--ax-primary); font-weight: 600; font-size: .9rem; margin-bottom: 8px; }
+.ax-team-bio { color: var(--ax-muted); font-size: .9rem; line-height: 1.5; }
+
+/* ==========================================================================
+   PRODUCTS PAGE
+   ========================================================================== */
+.ax-products-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 32px; }
+.ax-product-card {
+  background: #fff; border: 1px solid var(--ax-line); border-radius: var(--ax-radius-lg);
+  padding: 36px; transition: box-shadow .25s ease;
+}
+.ax-product-card:hover { box-shadow: var(--ax-shadow-lg); border-color: rgba(14,165,192,.2); }
+.ax-product-card-head { display: flex; align-items: center; gap: 16px; margin-bottom: 16px; }
+.ax-product-card-head .ax-industry-icon { flex-shrink: 0; }
+.ax-product-card-head h3 { margin: 0; }
+.ax-product-subtitle { color: var(--ax-muted); font-size: .85rem; margin: 2px 0 0; }
+.ax-product-card > p { color: var(--ax-muted); margin-bottom: 16px; }
+.ax-placeholder-product { min-height: 180px; margin-top: 20px; }
+
+/* ==========================================================================
+   SOLUTIONS PAGE
+   ========================================================================== */
+.ax-industry-section { padding: 80px 0; }
+.ax-industry-detail {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center;
+}
+.ax-industry-detail.ax-flip { direction: rtl; }
+.ax-industry-detail.ax-flip > * { direction: ltr; }
+.ax-industry-detail-copy h2 { margin-bottom: 12px; }
+.ax-industry-detail-copy > p { color: var(--ax-muted); margin-bottom: 10px; }
+.ax-social-proof { font-style: italic; color: var(--ax-primary-dark) !important; border-left: 3px solid var(--ax-primary); padding-left: 12px; }
+
+/* ==========================================================================
+   BLOG PAGE
+   ========================================================================== */
+.ax-blog-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; }
+.ax-blog-card {
+  background: #fff; border: 1px solid var(--ax-line); border-radius: var(--ax-radius-lg);
+  overflow: hidden; transition: transform .25s ease, box-shadow .25s ease;
+}
+.ax-blog-card:hover { transform: translateY(-4px); box-shadow: var(--ax-shadow-lg); }
+.ax-blog-card-img { display: block; aspect-ratio: 16/9; overflow: hidden; background: var(--ax-bg-soft); }
+.ax-blog-card-img img { width: 100%; height: 100%; object-fit: cover; transition: transform .3s ease; }
+.ax-blog-card:hover .ax-blog-card-img img { transform: scale(1.04); }
+.ax-blog-card-img .ax-placeholder { min-height: unset; height: 100%; border-radius: 0; border: 0; }
+.ax-blog-card-body { padding: 24px; }
+.ax-blog-date { font-size: .8rem; color: var(--ax-muted); font-weight: 500; text-transform: uppercase; letter-spacing: .04em; margin-bottom: 8px; }
+.ax-blog-card-body h3 { font-size: 1.05rem; margin-bottom: 8px; line-height: 1.3; }
+.ax-blog-card-body h3 a { color: var(--ax-ink); }
+.ax-blog-card-body h3 a:hover { color: var(--ax-primary); }
+.ax-blog-excerpt { color: var(--ax-muted); font-size: .9rem; margin-bottom: 12px; line-height: 1.5; }
+
+/* ==========================================================================
+   CONTACT PAGE — OPTIONS
+   ========================================================================== */
+.ax-contact-options { display: grid; grid-template-columns: 1fr; gap: 12px; margin-top: 24px; }
+.ax-contact-option {
+  background: var(--ax-bg-soft); border-radius: var(--ax-radius); padding: 18px 20px;
+  border-left: 3px solid var(--ax-primary);
+}
+.ax-contact-option h4 { color: var(--ax-primary); margin-bottom: 4px; font-size: .9rem; text-transform: none; letter-spacing: 0; }
+.ax-contact-option p { color: var(--ax-muted); font-size: .9rem; margin: 0; }
+
+/* ==========================================================================
+   LEGAL PAGES (Terms / Privacy)
+   ========================================================================== */
+.ax-legal-wrap { display: grid; grid-template-columns: 220px 1fr; gap: 60px; align-items: start; }
+.ax-legal-toc {
+  position: sticky; top: 96px; background: var(--ax-bg-soft);
+  border-radius: var(--ax-radius-lg); padding: 24px; border: 1px solid var(--ax-line);
+}
+.ax-legal-toc h4 { margin-bottom: 14px; font-size: .85rem; }
+.ax-legal-toc ol { list-style: decimal; padding-left: 18px; }
+.ax-legal-toc li { margin-bottom: 10px; }
+.ax-legal-toc a { color: var(--ax-muted); font-size: .88rem; line-height: 1.4; }
+.ax-legal-toc a:hover { color: var(--ax-primary); }
+.ax-legal-body h2 {
+  font-size: 1.2rem; margin: 2em 0 .6em; padding-top: 1em;
+  border-top: 1px solid var(--ax-line); color: var(--ax-ink);
+}
+.ax-legal-body h2:first-child { border-top: 0; margin-top: 0; padding-top: 0; }
+.ax-legal-body p { color: var(--ax-muted); line-height: 1.7; margin-bottom: .9em; }
+.ax-legal-body a { color: var(--ax-primary); }
+
+/* ==========================================================================
+   RESPONSIVE — INNER PAGES
+   ========================================================================== */
+@media (max-width: 1024px) {
+  .ax-about-mission,
+  .ax-industry-detail { grid-template-columns: 1fr; direction: ltr; }
+  .ax-products-grid,
+  .ax-blog-grid { grid-template-columns: repeat(2, 1fr); }
+  .ax-team-grid { grid-template-columns: repeat(2, 1fr); }
+  .ax-legal-wrap { grid-template-columns: 1fr; }
+  .ax-legal-toc { position: static; }
+  .ax-sub-menu { position: static; box-shadow: none; border: 0; padding: 0 0 0 16px; }
+  .ax-has-sub:hover .ax-sub-menu { display: none; }
+}
+@media (max-width: 640px) {
+  .ax-inner-hero { padding: 50px 0 60px; }
+  .ax-inner-hero-sm { padding: 40px 0 50px; }
+  .ax-products-grid,
+  .ax-blog-grid,
+  .ax-team-grid { grid-template-columns: 1fr; }
+  .ax-footer-bar-inner { flex-direction: column; text-align: center; }
 }
