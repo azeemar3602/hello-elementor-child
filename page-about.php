@@ -3,6 +3,27 @@
  * Template for the About page (slug: about).
  * WordPress auto-applies this when a page with slug "about" exists.
  */
+$GLOBALS['ax_seo'] = array(
+	'title'       => 'About Axion Communications | Cloud VoIP & UCaaS Since 2006',
+	'description' => 'Meet the team behind Axion Communications. 15+ years delivering enterprise-grade VoIP, SMS, and AI analytics to 2,400+ businesses across the United States.',
+	'og_type'     => 'website',
+	'og_image'    => '', // Replace with full URL to a 1200×630 OG image
+	'canonical'   => home_url( '/about/' ),
+	'schema'      => array(
+		'@context'    => 'https://schema.org',
+		'@type'       => 'AboutPage',
+		'name'        => 'About Axion Communications',
+		'url'         => home_url( '/about/' ),
+		'description' => 'Axion Communications was founded in 2006 with a mission to make business communication simple, reliable, and genuinely helpful.',
+		'breadcrumb'  => array(
+			'@type'           => 'BreadcrumbList',
+			'itemListElement' => array(
+				array( '@type' => 'ListItem', 'position' => 1, 'name' => 'Home',  'item' => home_url( '/' ) ),
+				array( '@type' => 'ListItem', 'position' => 2, 'name' => 'About', 'item' => home_url( '/about/' ) ),
+			),
+		),
+	),
+);
 get_template_part( 'template-parts/ax-header' );
 ?>
 

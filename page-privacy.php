@@ -2,6 +2,27 @@
 /**
  * Template for the Privacy Policy page (slug: privacy).
  */
+$GLOBALS['ax_seo'] = array(
+	'title'       => 'Privacy Policy | Axion Communications',
+	'description' => 'Learn how Axion Communications collects, uses, and protects your personal data. HIPAA-ready, SOC 2 Type II compliant, and CCPA/GDPR aware.',
+	'og_type'     => 'website',
+	'og_image'    => '',
+	'canonical'   => home_url( '/privacy/' ),
+	'schema'      => array(
+		'@context'    => 'https://schema.org',
+		'@type'       => 'WebPage',
+		'name'        => 'Privacy Policy — Axion Communications',
+		'url'         => home_url( '/privacy/' ),
+		'description' => 'Privacy Policy for the Axion Communications platform. SOC 2, HIPAA-ready, CCPA compliant.',
+		'breadcrumb'  => array(
+			'@type'           => 'BreadcrumbList',
+			'itemListElement' => array(
+				array( '@type' => 'ListItem', 'position' => 1, 'name' => 'Home',    'item' => home_url( '/' ) ),
+				array( '@type' => 'ListItem', 'position' => 2, 'name' => 'Privacy', 'item' => home_url( '/privacy/' ) ),
+			),
+		),
+	),
+);
 get_template_part( 'template-parts/ax-header' );
 ?>
 

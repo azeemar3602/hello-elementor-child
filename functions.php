@@ -6,7 +6,29 @@
 if ( ! defined( 'ABSPATH' ) ) { exit; }
 
 /**
- * Enqueue parent + child styles, and landing-page JS.
+ * Theme setup — title-tag support so WordPress controls <title>.
+ */
+add_action( 'after_setup_theme', 'hello_elementor_child_setup' );
+function hello_elementor_child_setup() {
+	add_theme_support( 'title-tag' );
+}
+
+/**
+ * Filter the document <title> using $GLOBALS['ax_seo']['title'] when set.
+ * Priority 5 runs before most SEO plugins (priority 10), so plugins still win
+ * when active (they re-filter at their own priority and override us).
+ */
+add_filter( 'document_title_parts', function ( $parts ) {
+	$seo = isset( $GLOBALS['ax_seo'] ) ? $GLOBALS['ax_seo'] : array();
+	if ( ! empty( $seo['title'] ) ) {
+		return array( 'title' => $seo['title'] );
+	}
+	return $parts;
+}, 5 );
+
+/**
+ * Enqueue parent + child styles, Google Font (Inter), and landing JS.
+ * JS is loaded on every axion page (all templates share the same nav/tabs).
  */
 add_action( 'wp_enqueue_scripts', 'hello_elementor_child_assets', 20 );
 function hello_elementor_child_assets() {
@@ -20,29 +42,17 @@ function hello_elementor_child_assets() {
 		array( 'parent-style' ),
 		wp_get_theme()->get( 'Version' )
 	);
-
-	// Google Fonts — Inter (matches Axion's clean sans-serif look).
 	wp_enqueue_style(
 		'ax-fonts',
 		'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap',
 		array(),
 		null
 	);
-
-	// Landing page interactivity (tabs, FAQ, mobile nav, sticky header).
-	if ( is_front_page() ) {
-		wp_enqueue_script(
-			'ax-landing',
-			get_stylesheet_directory_uri() . '/assets/js/landing.js',
-			array(),
-			wp_get_theme()->get( 'Version' ),
-			true
-		);
-	}
+	wp_enqueue_script(
+		'ax-landing',
+		get_stylesheet_directory_uri() . '/assets/js/landing.js',
+		array(),
+		wp_get_theme()->get( 'Version' ),
+		true
+	);
 }
-
-/**
- * Make sure the front-page.php template is used even when the homepage is
- * set to "static page" — fall back to latest-posts behavior is automatic.
- * Nothing extra needed here; WordPress picks up front-page.php automatically.
- */

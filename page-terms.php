@@ -2,6 +2,27 @@
 /**
  * Template for the Terms of Service page (slug: terms).
  */
+$GLOBALS['ax_seo'] = array(
+	'title'       => 'Terms of Service | Axion Communications',
+	'description' => 'Read the Axion Communications Terms of Service that govern your use of our VoIP, SMS, and unified communications platform.',
+	'og_type'     => 'website',
+	'og_image'    => '',
+	'canonical'   => home_url( '/terms/' ),
+	'schema'      => array(
+		'@context'    => 'https://schema.org',
+		'@type'       => 'WebPage',
+		'name'        => 'Terms of Service — Axion Communications',
+		'url'         => home_url( '/terms/' ),
+		'description' => 'Legal terms governing use of the Axion Communications platform.',
+		'breadcrumb'  => array(
+			'@type'           => 'BreadcrumbList',
+			'itemListElement' => array(
+				array( '@type' => 'ListItem', 'position' => 1, 'name' => 'Home',  'item' => home_url( '/' ) ),
+				array( '@type' => 'ListItem', 'position' => 2, 'name' => 'Terms', 'item' => home_url( '/terms/' ) ),
+			),
+		),
+	),
+);
 get_template_part( 'template-parts/ax-header' );
 ?>
 

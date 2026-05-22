@@ -3,6 +3,32 @@
  * Template for the Blog/Resources page (slug: blog).
  * Displays the 12 most recent posts in a card grid.
  */
+$GLOBALS['ax_seo'] = array(
+	'title'       => 'Blog & Resources | VoIP Tips & Business Communication Insights | Axion',
+	'description' => 'Tips, guides, and industry insights on VoIP, business SMS, AI call analytics, and unified communications from the team at Axion Communications.',
+	'og_type'     => 'website',
+	'og_image'    => '', // Replace with full URL to a 1200×630 OG image
+	'canonical'   => home_url( '/blog/' ),
+	'schema'      => array(
+		'@context'    => 'https://schema.org',
+		'@type'       => 'Blog',
+		'name'        => 'Axion Communications Blog',
+		'url'         => home_url( '/blog/' ),
+		'description' => 'Expert insights on VoIP, unified communications, and AI analytics for business.',
+		'publisher'   => array(
+			'@type' => 'Organization',
+			'name'  => 'Axion Communications',
+			'url'   => home_url( '/' ),
+		),
+		'breadcrumb'  => array(
+			'@type'           => 'BreadcrumbList',
+			'itemListElement' => array(
+				array( '@type' => 'ListItem', 'position' => 1, 'name' => 'Home', 'item' => home_url( '/' ) ),
+				array( '@type' => 'ListItem', 'position' => 2, 'name' => 'Blog', 'item' => home_url( '/blog/' ) ),
+			),
+		),
+	),
+);
 get_template_part( 'template-parts/ax-header' );
 ?>
 

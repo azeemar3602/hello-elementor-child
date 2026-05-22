@@ -2,6 +2,27 @@
 /**
  * Template for the Products page (slug: products).
  */
+$GLOBALS['ax_seo'] = array(
+	'title'       => 'VoIP Products & Platform Features | Axion Communications',
+	'description' => 'Explore Axion\'s 9 communication modules: HD Softphone, Business SMS, Team Chat, AI Call Recordings, Analytics Reports, Cloud PBX, VFax, File Transfer, and Video Meetings.',
+	'og_type'     => 'website',
+	'og_image'    => '', // Replace with full URL to a 1200×630 OG image
+	'canonical'   => home_url( '/products/' ),
+	'schema'      => array(
+		'@context'    => 'https://schema.org',
+		'@type'       => 'CollectionPage',
+		'name'        => 'Axion Communications Products',
+		'url'         => home_url( '/products/' ),
+		'description' => 'Nine purpose-built communication modules unified in a single cloud platform.',
+		'breadcrumb'  => array(
+			'@type'           => 'BreadcrumbList',
+			'itemListElement' => array(
+				array( '@type' => 'ListItem', 'position' => 1, 'name' => 'Home',     'item' => home_url( '/' ) ),
+				array( '@type' => 'ListItem', 'position' => 2, 'name' => 'Products', 'item' => home_url( '/products/' ) ),
+			),
+		),
+	),
+);
 get_template_part( 'template-parts/ax-header' );
 ?>
 

@@ -16,6 +16,75 @@ elseif ( is_page( 'contact' ) )             $ax_current = 'contact';
 <meta charset="<?php bloginfo( 'charset' ); ?>">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <link rel="profile" href="https://gmpg.org/xfn/11">
+<?php
+// ── SEO META ──────────────────────────────────────────────────────────────
+// Reads $GLOBALS['ax_seo'] set at the top of each page template.
+// Skips entirely when Yoast SEO, Rank Math, or AIOSEO is active — those
+// plugins output their own meta via wp_head() and must not be duplicated.
+$_ax             = isset( $GLOBALS['ax_seo'] ) ? $GLOBALS['ax_seo'] : array();
+$_ax_has_plugin  = defined( 'WPSEO_VERSION' ) || function_exists( 'rank_math' )
+                   || class_exists( 'RankMath' ) || defined( 'AIOSEOP_VERSION' );
+$_ax_title       = esc_attr( isset( $_ax['title'] )       ? $_ax['title']       : get_bloginfo( 'name' ) );
+$_ax_desc        = esc_attr( isset( $_ax['description'] ) ? $_ax['description'] : get_bloginfo( 'description' ) );
+$_ax_canonical   = esc_url(  isset( $_ax['canonical'] )   ? $_ax['canonical']   : ( ( is_ssl() ? 'https' : 'http' ) . '://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'] ) );
+$_ax_og_image    = esc_url(  isset( $_ax['og_image'] )    ? $_ax['og_image']    : '' );
+$_ax_og_type     = esc_attr( isset( $_ax['og_type'] )     ? $_ax['og_type']     : 'website' );
+$_ax_noindex     = ! empty( $_ax['noindex'] );
+?>
+<?php if ( ! $_ax_has_plugin ) : ?>
+<?php if ( $_ax_noindex ) : ?>
+<meta name="robots" content="noindex,nofollow">
+<?php endif; ?>
+<meta name="description" content="<?php echo $_ax_desc; ?>">
+<link rel="canonical" href="<?php echo $_ax_canonical; ?>">
+<!-- Open Graph -->
+<meta property="og:type"        content="<?php echo $_ax_og_type; ?>">
+<meta property="og:title"       content="<?php echo $_ax_title; ?>">
+<meta property="og:description" content="<?php echo $_ax_desc; ?>">
+<meta property="og:url"         content="<?php echo $_ax_canonical; ?>">
+<meta property="og:site_name"   content="<?php echo esc_attr( get_bloginfo( 'name' ) ); ?>">
+<?php if ( $_ax_og_image ) : ?>
+<meta property="og:image"       content="<?php echo $_ax_og_image; ?>">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<?php endif; ?>
+<!-- Twitter Card -->
+<meta name="twitter:card"        content="summary_large_image">
+<meta name="twitter:title"       content="<?php echo $_ax_title; ?>">
+<meta name="twitter:description" content="<?php echo $_ax_desc; ?>">
+<?php if ( $_ax_og_image ) : ?>
+<meta name="twitter:image"       content="<?php echo $_ax_og_image; ?>">
+<?php endif; ?>
+<?php endif; ?>
+<!-- Organization JSON-LD (always present — safe alongside SEO plugins) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Axion Communications",
+  "url": "<?php echo esc_url( home_url( '/' ) ); ?>",
+  "logo": "<?php echo esc_url( home_url( '/' ) ); ?>logo.png",
+  "telephone": "+18559829466",
+  "email": "customercare@axionco.com",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "663 Cochran ST #100",
+    "addressLocality": "Simi Valley",
+    "addressRegion": "CA",
+    "postalCode": "93065",
+    "addressCountry": "US"
+  },
+  "sameAs": [
+    "https://www.facebook.com/axioncommunications",
+    "https://www.linkedin.com/company/axioncommunications",
+    "https://www.youtube.com/@axioncommunications"
+  ]
+}
+</script>
+<?php if ( ! empty( $_ax['schema'] ) ) : ?>
+<!-- Page-specific JSON-LD -->
+<script type="application/ld+json"><?php echo wp_json_encode( $_ax['schema'], JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT ); ?></script>
+<?php endif; ?>
 <?php wp_head(); ?>
 </head>
 <body <?php body_class( 'axion-landing' ); ?>>
