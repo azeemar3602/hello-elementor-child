@@ -2,6 +2,27 @@
 /**
  * Template for the Solutions page (slug: solutions).
  */
+$GLOBALS['ax_seo'] = array(
+	'title'       => 'Industry Communication Solutions | Healthcare, Real Estate & More | Axion',
+	'description' => 'Axion Communications serves healthcare, veterinary, real estate, education, high tech, consumer services, logistics, and finance with purpose-built VoIP and messaging workflows.',
+	'og_type'     => 'website',
+	'og_image'    => '', // Replace with full URL to a 1200×630 OG image
+	'canonical'   => home_url( '/solutions/' ),
+	'schema'      => array(
+		'@context'    => 'https://schema.org',
+		'@type'       => 'CollectionPage',
+		'name'        => 'Axion Industry Solutions',
+		'url'         => home_url( '/solutions/' ),
+		'description' => 'Purpose-built communication solutions for 8 industry verticals.',
+		'breadcrumb'  => array(
+			'@type'           => 'BreadcrumbList',
+			'itemListElement' => array(
+				array( '@type' => 'ListItem', 'position' => 1, 'name' => 'Home',      'item' => home_url( '/' ) ),
+				array( '@type' => 'ListItem', 'position' => 2, 'name' => 'Solutions', 'item' => home_url( '/solutions/' ) ),
+			),
+		),
+	),
+);
 get_template_part( 'template-parts/ax-header' );
 ?>
 

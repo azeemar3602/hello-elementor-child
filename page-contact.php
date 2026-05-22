@@ -2,6 +2,27 @@
 /**
  * Template for the Contact page (slug: contact).
  */
+$GLOBALS['ax_seo'] = array(
+	'title'       => 'Contact Axion Communications | (855) 982-9466 | Simi Valley, CA',
+	'description' => 'Get in touch with Axion Communications. Call (855) 982-9466, email customercare@axionco.com, or fill out our form. A real human responds within one business day.',
+	'og_type'     => 'website',
+	'og_image'    => '', // Replace with full URL to a 1200×630 OG image
+	'canonical'   => home_url( '/contact/' ),
+	'schema'      => array(
+		'@context'    => 'https://schema.org',
+		'@type'       => 'ContactPage',
+		'name'        => 'Contact Axion Communications',
+		'url'         => home_url( '/contact/' ),
+		'description' => 'Reach Axion Communications by phone, email, or contact form. 24/7 live support.',
+		'breadcrumb'  => array(
+			'@type'           => 'BreadcrumbList',
+			'itemListElement' => array(
+				array( '@type' => 'ListItem', 'position' => 1, 'name' => 'Home',    'item' => home_url( '/' ) ),
+				array( '@type' => 'ListItem', 'position' => 2, 'name' => 'Contact', 'item' => home_url( '/contact/' ) ),
+			),
+		),
+	),
+);
 get_template_part( 'template-parts/ax-header' );
 ?>
 

@@ -3,6 +3,28 @@
  * Front Page Template - Axion-style landing page.
  * WordPress uses this file automatically as the site front page.
  */
+$GLOBALS['ax_seo'] = array(
+	'title'       => 'Axion Communications | All-In-One Business Communication Solutions',
+	'description' => 'Crystal-clear VoIP, AI-driven insights, SMS, VFAX, and team chat — all in one cloud platform. Serving 2,400+ US businesses with 99.999% uptime and 24/7 live support.',
+	'og_type'     => 'website',
+	'og_image'    => '', // Replace with full URL to a 1200×630 OG image
+	'canonical'   => home_url( '/' ),
+	'schema'      => array(
+		'@context'        => 'https://schema.org',
+		'@type'           => 'WebSite',
+		'name'            => 'Axion Communications',
+		'url'             => home_url( '/' ),
+		'description'     => 'All-in-one cloud business communication platform — VoIP, SMS, AI analytics, team chat, VFAX, and more.',
+		'potentialAction' => array(
+			'@type'       => 'SearchAction',
+			'target'      => array(
+				'@type'       => 'EntryPoint',
+				'urlTemplate' => home_url( '/?s={search_term_string}' ),
+			),
+			'query-input' => 'required name=search_term_string',
+		),
+	),
+);
 get_template_part( 'template-parts/ax-header' );
 ?>
 
