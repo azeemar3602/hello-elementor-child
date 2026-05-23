@@ -617,3 +617,68 @@ Description: Hello Elementor child theme with custom Axion-style landing page (f
   .ax-team-grid { grid-template-columns: 1fr; }
   .ax-footer-bar-inner { flex-direction: column; text-align: center; }
 }
+
+/* ==========================================================================
+   ELEMENTOR INTEGRATION
+   Strip Elementor wrapper defaults so our section classes own all spacing,
+   backgrounds, and max-width. Works for both section and container modes.
+   ========================================================================== */
+.elementor-section.ax-hero,
+.elementor-section.ax-section,
+.elementor-section.ax-features,
+.elementor-section.ax-industries,
+.elementor-section.ax-defining,
+.elementor-section.ax-integrations,
+.elementor-section.ax-trust,
+.elementor-section.ax-urgency,
+.elementor-section.ax-faq,
+.elementor-section.ax-testimonials,
+.elementor-section.ax-contact {
+  padding: 0 !important;
+}
+.elementor-section.ax-hero > .elementor-container,
+.elementor-section.ax-section > .elementor-container,
+.elementor-section.ax-features > .elementor-container,
+.elementor-section.ax-industries > .elementor-container,
+.elementor-section.ax-defining > .elementor-container,
+.elementor-section.ax-integrations > .elementor-container,
+.elementor-section.ax-trust > .elementor-container,
+.elementor-section.ax-urgency > .elementor-container,
+.elementor-section.ax-faq > .elementor-container,
+.elementor-section.ax-testimonials > .elementor-container,
+.elementor-section.ax-contact > .elementor-container {
+  max-width: 100% !important;
+}
+.elementor-section.ax-hero .elementor-widget-wrap,
+.elementor-section.ax-section .elementor-widget-wrap,
+.elementor-section.ax-features .elementor-widget-wrap,
+.elementor-section.ax-industries .elementor-widget-wrap,
+.elementor-section.ax-defining .elementor-widget-wrap,
+.elementor-section.ax-integrations .elementor-widget-wrap,
+.elementor-section.ax-trust .elementor-widget-wrap,
+.elementor-section.ax-urgency .elementor-widget-wrap,
+.elementor-section.ax-faq .elementor-widget-wrap,
+.elementor-section.ax-testimonials .elementor-widget-wrap,
+.elementor-section.ax-contact .elementor-widget-wrap {
+  padding: 0 !important;
+}
+.elementor-section.ax-hero .elementor-widget-container,
+.elementor-section.ax-section .elementor-widget-container {
+  padding: 0;
+  margin: 0;
+}
+/* Elementor Flexbox Container mode (v3.6+) */
+.e-con.ax-hero,
+.e-con.ax-section,
+.e-con.ax-features,
+.e-con.ax-industries,
+.e-con.ax-defining,
+.e-con.ax-integrations,
+.e-con.ax-trust,
+.e-con.ax-urgency,
+.e-con.ax-faq,
+.e-con.ax-testimonials,
+.e-con.ax-contact {
+  padding: 0 !important;
+  --padding-top: 0; --padding-right: 0; --padding-bottom: 0; --padding-left: 0;
+}

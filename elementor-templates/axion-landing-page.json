@@ -1,0 +1,335 @@
+{
+  "version": "0.4",
+  "title": "Axion Communications — Landing Page",
+  "type": "page",
+  "content": [
+
+    {
+      "id": "sec_hero",
+      "elType": "section",
+      "isInner": false,
+      "settings": {
+        "css_classes": "ax-hero",
+        "content_width": "full",
+        "padding": { "unit": "px", "top": "0", "right": "0", "bottom": "0", "left": "0", "isLinked": true }
+      },
+      "elements": [
+        {
+          "id": "col_hero",
+          "elType": "column",
+          "settings": {
+            "_column_size": 100,
+            "_inline_size": null,
+            "padding": { "unit": "px", "top": "0", "right": "0", "bottom": "0", "left": "0", "isLinked": true }
+          },
+          "elements": [
+            {
+              "id": "wgt_hero",
+              "elType": "widget",
+              "widgetType": "html",
+              "settings": {
+                "html": "<div class=\"ax-container ax-hero-inner\"><div class=\"ax-hero-copy\"><p class=\"ax-eyebrow\">Unified Business Communication</p><h1>All-In-One Business <span class=\"ax-grad\">Communication Solutions</span></h1><p class=\"ax-lead\">Crystal-clear VoIP calls, AI-driven insights, instant messaging, VFAX, advanced call management, and much more — all in one platform built to scale with your business.</p><div class=\"ax-cta-row\"><a href=\"/contact/\" class=\"ax-btn ax-btn-primary ax-btn-lg\">Book a Demo</a><a href=\"/contact/\" class=\"ax-btn ax-btn-outline ax-btn-lg\">Book a Discovery Call</a></div><ul class=\"ax-hero-points\"><li>HD VoIP &amp; Softphone</li><li>AI Call Insights</li><li>SMS &amp; Team Chat</li><li>24/7 Support</li></ul></div><div class=\"ax-hero-visual\" aria-hidden=\"true\"><div class=\"ax-placeholder ax-placeholder-hero\">[Product Screenshot]</div><div class=\"ax-float-card ax-float-1\"><div class=\"ax-float-dot ax-dot-green\"></div><div><strong>AI Sentiment</strong><span>+24% positive</span></div></div><div class=\"ax-float-card ax-float-2\"><div class=\"ax-float-dot ax-dot-blue\"></div><div><strong>Live Calls</strong><span>312 active</span></div></div></div></div>"
+              }
+            }
+          ]
+        }
+      ]
+    },
+
+    {
+      "id": "sec_features",
+      "elType": "section",
+      "isInner": false,
+      "settings": {
+        "css_classes": "ax-section ax-features",
+        "custom_id": "products",
+        "content_width": "full",
+        "padding": { "unit": "px", "top": "0", "right": "0", "bottom": "0", "left": "0", "isLinked": true }
+      },
+      "elements": [
+        {
+          "id": "col_features",
+          "elType": "column",
+          "settings": {
+            "_column_size": 100,
+            "_inline_size": null,
+            "padding": { "unit": "px", "top": "0", "right": "0", "bottom": "0", "left": "0", "isLinked": true }
+          },
+          "elements": [
+            {
+              "id": "wgt_features",
+              "elType": "widget",
+              "widgetType": "html",
+              "settings": {
+                "html": "<div class=\"ax-container\"><header class=\"ax-section-head\"><p class=\"ax-eyebrow\">Platform</p><h2>Tap Into Features That Fuel Success</h2><p class=\"ax-sub\">One platform. Nine purpose-built modules. Every channel your team needs to win the customer.</p></header><div class=\"ax-tabs\" data-ax-tabs><div class=\"ax-tab-buttons\" role=\"tablist\"><button class=\"ax-tab-btn is-active\" role=\"tab\" data-tab=\"softphone\">Softphone</button><button class=\"ax-tab-btn\" role=\"tab\" data-tab=\"sms\">SMS</button><button class=\"ax-tab-btn\" role=\"tab\" data-tab=\"chat\">Chat</button><button class=\"ax-tab-btn\" role=\"tab\" data-tab=\"recordings\">Recordings</button><button class=\"ax-tab-btn\" role=\"tab\" data-tab=\"reports\">Reports</button><button class=\"ax-tab-btn\" role=\"tab\" data-tab=\"pbx\">PBX</button><button class=\"ax-tab-btn\" role=\"tab\" data-tab=\"vfax\">VFax</button><button class=\"ax-tab-btn\" role=\"tab\" data-tab=\"files\">File Transfer</button><button class=\"ax-tab-btn\" role=\"tab\" data-tab=\"meetings\">Meetings</button></div><div class=\"ax-tab-panel is-active\" role=\"tabpanel\" data-panel=\"softphone\"><div class=\"ax-tab-copy\"><h3>Softphone</h3><p>HD calling, smart search, and presence awareness in a unified desktop &amp; mobile app.</p><ul class=\"ax-check-list\"><li>HD voice quality</li><li>Presence indicators</li><li>Smart contact search</li><li>Click-to-dial anywhere</li></ul><a href=\"/products/#softphone\" class=\"ax-link-arrow\">See it in action →</a></div><div class=\"ax-tab-visual\"><div class=\"ax-placeholder ax-placeholder-feature\">[Softphone Screenshot]</div></div></div><div class=\"ax-tab-panel\" role=\"tabpanel\" data-panel=\"sms\"><div class=\"ax-tab-copy\"><h3>SMS</h3><p>Send professional business text messages and group SMS without losing the conversation thread.</p><ul class=\"ax-check-list\"><li>Two-way business SMS</li><li>Group messaging</li><li>Templated responses</li><li>Compliance archiving</li></ul><a href=\"/products/#sms\" class=\"ax-link-arrow\">See it in action →</a></div><div class=\"ax-tab-visual\"><div class=\"ax-placeholder ax-placeholder-feature\">[SMS Screenshot]</div></div></div><div class=\"ax-tab-panel\" role=\"tabpanel\" data-panel=\"chat\"><div class=\"ax-tab-copy\"><h3>Chat</h3><p>One-on-one and group messaging with file sharing — keep your team in sync.</p><ul class=\"ax-check-list\"><li>Direct &amp; group chat</li><li>File sharing</li><li>Channels &amp; threads</li><li>Read receipts</li></ul><a href=\"/products/#chat\" class=\"ax-link-arrow\">See it in action →</a></div><div class=\"ax-tab-visual\"><div class=\"ax-placeholder ax-placeholder-feature\">[Chat Screenshot]</div></div></div><div class=\"ax-tab-panel\" role=\"tabpanel\" data-panel=\"recordings\"><div class=\"ax-tab-copy\"><h3>Recordings</h3><p>AI sentiment analysis and transcription on every call you choose to record.</p><ul class=\"ax-check-list\"><li>Automatic transcription</li><li>AI sentiment scoring</li><li>Searchable archive</li><li>Compliance retention</li></ul><a href=\"/products/#recordings\" class=\"ax-link-arrow\">See it in action →</a></div><div class=\"ax-tab-visual\"><div class=\"ax-placeholder ax-placeholder-feature\">[Recordings Screenshot]</div></div></div><div class=\"ax-tab-panel\" role=\"tabpanel\" data-panel=\"reports\"><div class=\"ax-tab-copy\"><h3>Reports</h3><p>Performance tracking and customized analytics dashboards across your whole team.</p><ul class=\"ax-check-list\"><li>Real-time dashboards</li><li>Custom KPIs</li><li>Scheduled exports</li><li>Agent leaderboards</li></ul><a href=\"/products/#reports\" class=\"ax-link-arrow\">See it in action →</a></div><div class=\"ax-tab-visual\"><div class=\"ax-placeholder ax-placeholder-feature\">[Reports Screenshot]</div></div></div><div class=\"ax-tab-panel\" role=\"tabpanel\" data-panel=\"pbx\"><div class=\"ax-tab-copy\"><h3>PBX</h3><p>Call distribution, smart routing, and queueing to make sure no caller is left on hold.</p><ul class=\"ax-check-list\"><li>Smart routing rules</li><li>Queue management</li><li>IVR menus</li><li>Hunt groups</li></ul><a href=\"/products/#pbx\" class=\"ax-link-arrow\">See it in action →</a></div><div class=\"ax-tab-visual\"><div class=\"ax-placeholder ax-placeholder-feature\">[PBX Screenshot]</div></div></div><div class=\"ax-tab-panel\" role=\"tabpanel\" data-panel=\"vfax\"><div class=\"ax-tab-copy\"><h3>VFax</h3><p>Cloud-based faxing with reusable templates — secure, compliant, and paperless.</p><ul class=\"ax-check-list\"><li>Send/receive online</li><li>HIPAA-ready</li><li>Template library</li><li>Activity logs</li></ul><a href=\"/products/#vfax\" class=\"ax-link-arrow\">See it in action →</a></div><div class=\"ax-tab-visual\"><div class=\"ax-placeholder ax-placeholder-feature\">[VFax Screenshot]</div></div></div><div class=\"ax-tab-panel\" role=\"tabpanel\" data-panel=\"files\"><div class=\"ax-tab-copy\"><h3>File Transfer</h3><p>Encrypted file storage and granular access controls for sharing inside &amp; outside the org.</p><ul class=\"ax-check-list\"><li>End-to-end encryption</li><li>Access controls</li><li>Version history</li><li>External share links</li></ul><a href=\"/products/#files\" class=\"ax-link-arrow\">See it in action →</a></div><div class=\"ax-tab-visual\"><div class=\"ax-placeholder ax-placeholder-feature\">[File Transfer Screenshot]</div></div></div><div class=\"ax-tab-panel\" role=\"tabpanel\" data-panel=\"meetings\"><div class=\"ax-tab-copy\"><h3>Meetings</h3><p>Video meetings with screen sharing, recording, and built-in scheduling.</p><ul class=\"ax-check-list\"><li>HD video meetings</li><li>Screen sharing</li><li>Cloud recording</li><li>Calendar integrations</li></ul><a href=\"/products/#meetings\" class=\"ax-link-arrow\">See it in action →</a></div><div class=\"ax-tab-visual\"><div class=\"ax-placeholder ax-placeholder-feature\">[Meetings Screenshot]</div></div></div></div></div>"
+              }
+            }
+          ]
+        }
+      ]
+    },
+
+    {
+      "id": "sec_industries",
+      "elType": "section",
+      "isInner": false,
+      "settings": {
+        "css_classes": "ax-section ax-industries",
+        "custom_id": "solutions",
+        "content_width": "full",
+        "padding": { "unit": "px", "top": "0", "right": "0", "bottom": "0", "left": "0", "isLinked": true }
+      },
+      "elements": [
+        {
+          "id": "col_industries",
+          "elType": "column",
+          "settings": {
+            "_column_size": 100,
+            "_inline_size": null,
+            "padding": { "unit": "px", "top": "0", "right": "0", "bottom": "0", "left": "0", "isLinked": true }
+          },
+          "elements": [
+            {
+              "id": "wgt_industries",
+              "elType": "widget",
+              "widgetType": "html",
+              "settings": {
+                "html": "<div class=\"ax-container\"><header class=\"ax-section-head\"><p class=\"ax-eyebrow\">Solutions by Industry</p><h2>Built for the Way Your Industry Works</h2><p class=\"ax-sub\">Pain points are different in every vertical. Our platform meets each one with purpose-built workflows.</p></header><div class=\"ax-industry-grid\"><article class=\"ax-industry-card\"><div class=\"ax-industry-icon\"><span>H</span></div><h3>Healthcare</h3><p>HIPAA-ready calls, secure messaging, and appointment workflows that keep patient data protected.</p><a href=\"/solutions/#healthcare\" class=\"ax-link-arrow\">Learn more →</a></article><article class=\"ax-industry-card\"><div class=\"ax-industry-icon\"><span>V</span></div><h3>Veterinary</h3><p>Practice-wide call routing, SMS reminders, and Covetrus integration for streamlined ops.</p><a href=\"/solutions/#veterinary\" class=\"ax-link-arrow\">Learn more →</a></article><article class=\"ax-industry-card\"><div class=\"ax-industry-icon\"><span>R</span></div><h3>Real Estate</h3><p>Mobile-first softphone, listing-line routing, and SMS that keeps deals moving while you're on the road.</p><a href=\"/solutions/#real-estate\" class=\"ax-link-arrow\">Learn more →</a></article><article class=\"ax-industry-card\"><div class=\"ax-industry-icon\"><span>E</span></div><h3>Education</h3><p>Campus-wide directories, parent-teacher SMS, and reliable conferencing for hybrid learning.</p><a href=\"/solutions/#education\" class=\"ax-link-arrow\">Learn more →</a></article><article class=\"ax-industry-card\"><div class=\"ax-industry-icon\"><span>H</span></div><h3>High Tech</h3><p>API-first platform that plugs into your existing CRM, ticketing, and analytics stack.</p><a href=\"/solutions/#high-tech\" class=\"ax-link-arrow\">Learn more →</a></article><article class=\"ax-industry-card\"><div class=\"ax-industry-icon\"><span>C</span></div><h3>Consumer Services</h3><p>Front-desk-ready PBX with smart queues so no booking call goes unanswered.</p><a href=\"/solutions/#consumer\" class=\"ax-link-arrow\">Learn more →</a></article><article class=\"ax-industry-card\"><div class=\"ax-industry-icon\"><span>L</span></div><h3>Logistics</h3><p>Dispatch SMS, driver hotlines, and reporting that ties calls to deliveries.</p><a href=\"/solutions/#logistics\" class=\"ax-link-arrow\">Learn more →</a></article><article class=\"ax-industry-card\"><div class=\"ax-industry-icon\"><span>F</span></div><h3>Finance</h3><p>Compliance recording, archiving, and call-quality reporting your auditors will love.</p><a href=\"/solutions/#finance\" class=\"ax-link-arrow\">Learn more →</a></article></div></div>"
+              }
+            }
+          ]
+        }
+      ]
+    },
+
+    {
+      "id": "sec_defining",
+      "elType": "section",
+      "isInner": false,
+      "settings": {
+        "css_classes": "ax-section ax-defining",
+        "content_width": "full",
+        "padding": { "unit": "px", "top": "0", "right": "0", "bottom": "0", "left": "0", "isLinked": true }
+      },
+      "elements": [
+        {
+          "id": "col_defining",
+          "elType": "column",
+          "settings": {
+            "_column_size": 100,
+            "_inline_size": null,
+            "padding": { "unit": "px", "top": "0", "right": "0", "bottom": "0", "left": "0", "isLinked": true }
+          },
+          "elements": [
+            {
+              "id": "wgt_defining",
+              "elType": "widget",
+              "widgetType": "html",
+              "settings": {
+                "html": "<div class=\"ax-container\"><header class=\"ax-section-head ax-light\"><p class=\"ax-eyebrow\">Why Axion</p><h2>What Makes Us Different</h2></header><div class=\"ax-feature-grid\"><div class=\"ax-feature-card\"><div class=\"ax-feature-bullet\"></div><h3>Best-in-class Support</h3><p>A real human on the line — 24/7 — backed by a team that knows your account.</p></div><div class=\"ax-feature-card\"><div class=\"ax-feature-bullet\"></div><h3>Cost-effective Cloud</h3><p>Predictable monthly pricing, no PBX hardware, no surprise long-distance bills.</p></div><div class=\"ax-feature-card\"><div class=\"ax-feature-bullet\"></div><h3>Scale Without Limits</h3><p>Add users, locations, or numbers in minutes. The platform grows with you.</p></div><div class=\"ax-feature-card\"><div class=\"ax-feature-bullet\"></div><h3>Innovation First</h3><p>AI insights, sentiment, and analytics shipping in every release.</p></div><div class=\"ax-feature-card\"><div class=\"ax-feature-bullet\"></div><h3>Plays With Your Stack</h3><p>Open APIs and pre-built integrations with Salesforce, Covetrus, and more.</p></div><div class=\"ax-feature-card\"><div class=\"ax-feature-bullet\"></div><h3>Enterprise Reliability</h3><p>99.999% uptime SLA on geo-redundant infrastructure.</p></div></div></div>"
+              }
+            }
+          ]
+        }
+      ]
+    },
+
+    {
+      "id": "sec_integrations",
+      "elType": "section",
+      "isInner": false,
+      "settings": {
+        "css_classes": "ax-section ax-integrations",
+        "content_width": "full",
+        "padding": { "unit": "px", "top": "0", "right": "0", "bottom": "0", "left": "0", "isLinked": true }
+      },
+      "elements": [
+        {
+          "id": "col_integrations",
+          "elType": "column",
+          "settings": {
+            "_column_size": 100,
+            "_inline_size": null,
+            "padding": { "unit": "px", "top": "0", "right": "0", "bottom": "0", "left": "0", "isLinked": true }
+          },
+          "elements": [
+            {
+              "id": "wgt_integrations",
+              "elType": "widget",
+              "widgetType": "html",
+              "settings": {
+                "html": "<div class=\"ax-container ax-integrations-inner\"><div class=\"ax-integrations-copy\"><p class=\"ax-eyebrow\">Integrations</p><h2>Seamlessly Connects to the Tools You Already Use</h2><p>Salesforce, Covetrus, HubSpot, Slack, Microsoft Teams, Zendesk — and dozens more.</p><a href=\"/products/\" class=\"ax-btn ax-btn-primary\">Explore Integrations</a></div><div class=\"ax-logo-wall\"><div class=\"ax-logo-tile\">Salesforce</div><div class=\"ax-logo-tile\">HubSpot</div><div class=\"ax-logo-tile\">Slack</div><div class=\"ax-logo-tile\">MS Teams</div><div class=\"ax-logo-tile\">Covetrus</div><div class=\"ax-logo-tile\">Zendesk</div><div class=\"ax-logo-tile\">Zapier</div><div class=\"ax-logo-tile\">Google</div></div></div>"
+              }
+            }
+          ]
+        }
+      ]
+    },
+
+    {
+      "id": "sec_stats",
+      "elType": "section",
+      "isInner": false,
+      "settings": {
+        "css_classes": "ax-section ax-trust",
+        "content_width": "full",
+        "padding": { "unit": "px", "top": "0", "right": "0", "bottom": "0", "left": "0", "isLinked": true }
+      },
+      "elements": [
+        {
+          "id": "col_stats",
+          "elType": "column",
+          "settings": {
+            "_column_size": 100,
+            "_inline_size": null,
+            "padding": { "unit": "px", "top": "0", "right": "0", "bottom": "0", "left": "0", "isLinked": true }
+          },
+          "elements": [
+            {
+              "id": "wgt_stats",
+              "elType": "widget",
+              "widgetType": "html",
+              "settings": {
+                "html": "<div class=\"ax-container\"><div class=\"ax-stat-row\"><div class=\"ax-stat\"><span class=\"ax-stat-num\">15+</span><span class=\"ax-stat-label\">Years of Excellence</span></div><div class=\"ax-stat\"><span class=\"ax-stat-num\">2,400+</span><span class=\"ax-stat-label\">Active Client Accounts</span></div><div class=\"ax-stat\"><span class=\"ax-stat-num\">99.999%</span><span class=\"ax-stat-label\">Uptime SLA</span></div><div class=\"ax-stat\"><span class=\"ax-stat-num\">24/7</span><span class=\"ax-stat-label\">Live Support</span></div></div><div class=\"ax-trust-cta\"><a href=\"/contact/\" class=\"ax-btn ax-btn-primary\">Book a Demo</a><a href=\"/contact/\" class=\"ax-btn ax-btn-outline\">Talk to Sales</a></div></div>"
+              }
+            }
+          ]
+        }
+      ]
+    },
+
+    {
+      "id": "sec_urgency",
+      "elType": "section",
+      "isInner": false,
+      "settings": {
+        "css_classes": "ax-section ax-urgency",
+        "content_width": "full",
+        "padding": { "unit": "px", "top": "0", "right": "0", "bottom": "0", "left": "0", "isLinked": true }
+      },
+      "elements": [
+        {
+          "id": "col_urgency",
+          "elType": "column",
+          "settings": {
+            "_column_size": 100,
+            "_inline_size": null,
+            "padding": { "unit": "px", "top": "0", "right": "0", "bottom": "0", "left": "0", "isLinked": true }
+          },
+          "elements": [
+            {
+              "id": "wgt_urgency",
+              "elType": "widget",
+              "widgetType": "html",
+              "settings": {
+                "html": "<div class=\"ax-container ax-urgency-inner\"><h2>Stop Losing Calls, Clients &amp; Revenue</h2><p>Every dropped call is a lost opportunity. Axion turns your communication stack into a competitive advantage.</p><div class=\"ax-cta-row\"><a href=\"/contact/\" class=\"ax-btn ax-btn-accent ax-btn-lg\">Book a Demo</a><a href=\"/contact/\" class=\"ax-btn ax-btn-ghost ax-btn-lg\">Book a Discovery Call</a></div></div>"
+              }
+            }
+          ]
+        }
+      ]
+    },
+
+    {
+      "id": "sec_faq",
+      "elType": "section",
+      "isInner": false,
+      "settings": {
+        "css_classes": "ax-section ax-faq",
+        "custom_id": "resources",
+        "content_width": "full",
+        "padding": { "unit": "px", "top": "0", "right": "0", "bottom": "0", "left": "0", "isLinked": true }
+      },
+      "elements": [
+        {
+          "id": "col_faq",
+          "elType": "column",
+          "settings": {
+            "_column_size": 100,
+            "_inline_size": null,
+            "padding": { "unit": "px", "top": "0", "right": "0", "bottom": "0", "left": "0", "isLinked": true }
+          },
+          "elements": [
+            {
+              "id": "wgt_faq",
+              "elType": "widget",
+              "widgetType": "html",
+              "settings": {
+                "html": "<div class=\"ax-container\"><header class=\"ax-section-head\"><p class=\"ax-eyebrow\">FAQ</p><h2>Frequently Asked Questions</h2></header><div class=\"ax-faq-list\" data-ax-faq><details class=\"ax-faq-item\" open><summary><span class=\"ax-faq-q\">How do I contact Axion Communications?</span><span class=\"ax-faq-icon\"></span></summary><div class=\"ax-faq-a\"><p>Call (855) 982-9466 or email customercare@axionco.com. We answer live, 24/7.</p></div></details><details class=\"ax-faq-item\"><summary><span class=\"ax-faq-q\">What makes Axion different from other VoIP providers?</span><span class=\"ax-faq-icon\"></span></summary><div class=\"ax-faq-a\"><p>A single platform for voice, SMS, chat, fax, and AI — backed by white-glove human support and 99.999% uptime.</p></div></details><details class=\"ax-faq-item\"><summary><span class=\"ax-faq-q\">Is Axion a good fit for small and mid-sized businesses?</span><span class=\"ax-faq-icon\"></span></summary><div class=\"ax-faq-a\"><p>Yes. Most of our customers are SMBs. Pricing scales per seat with no minimum.</p></div></details><details class=\"ax-faq-item\"><summary><span class=\"ax-faq-q\">What are the benefits of switching to VoIP?</span><span class=\"ax-faq-icon\"></span></summary><div class=\"ax-faq-a\"><p>Lower cost, more features, mobility, and reliability that traditional PBX hardware cannot match.</p></div></details><details class=\"ax-faq-item\"><summary><span class=\"ax-faq-q\">Do you offer reseller or partner programs?</span><span class=\"ax-faq-icon\"></span></summary><div class=\"ax-faq-a\"><p>Yes — we have dedicated channel and white-label programs. Get in touch via the contact page.</p></div></details><details class=\"ax-faq-item\"><summary><span class=\"ax-faq-q\">How quickly can my team be onboarded?</span><span class=\"ax-faq-icon\"></span></summary><div class=\"ax-faq-a\"><p>Most teams are fully live within 5 business days, including number porting and training.</p></div></details></div></div>"
+              }
+            }
+          ]
+        }
+      ]
+    },
+
+    {
+      "id": "sec_testimonials",
+      "elType": "section",
+      "isInner": false,
+      "settings": {
+        "css_classes": "ax-section ax-testimonials",
+        "content_width": "full",
+        "padding": { "unit": "px", "top": "0", "right": "0", "bottom": "0", "left": "0", "isLinked": true }
+      },
+      "elements": [
+        {
+          "id": "col_testimonials",
+          "elType": "column",
+          "settings": {
+            "_column_size": 100,
+            "_inline_size": null,
+            "padding": { "unit": "px", "top": "0", "right": "0", "bottom": "0", "left": "0", "isLinked": true }
+          },
+          "elements": [
+            {
+              "id": "wgt_testimonials",
+              "elType": "widget",
+              "widgetType": "html",
+              "settings": {
+                "html": "<div class=\"ax-container\"><header class=\"ax-section-head\"><p class=\"ax-eyebrow\">Customer Stories</p><h2>Trusted by Teams Across the U.S.</h2></header><div class=\"ax-testimonial-grid\"><figure class=\"ax-testimonial-card\"><div class=\"ax-stars\">★★★★★</div><blockquote>“Best business communication decision we made this year. Support is unmatched.”</blockquote><figcaption><strong>Sarah K.</strong><span>Office Manager, Alaska</span></figcaption></figure><figure class=\"ax-testimonial-card\"><div class=\"ax-stars\">★★★★★</div><blockquote>“Migration was painless. We were fully live in less than a week.”</blockquote><figcaption><strong>Marcus T.</strong><span>IT Director, California</span></figcaption></figure><figure class=\"ax-testimonial-card\"><div class=\"ax-stars\">★★★★★</div><blockquote>“The AI sentiment reports changed how we coach our agents. Game changer.”</blockquote><figcaption><strong>Priya R.</strong><span>VP Operations, New York</span></figcaption></figure><figure class=\"ax-testimonial-card\"><div class=\"ax-stars\">★★★★★</div><blockquote>“99.999% uptime is real. We have not had a single outage in two years.”</blockquote><figcaption><strong>Daniel M.</strong><span>Owner, California</span></figcaption></figure></div></div>"
+              }
+            }
+          ]
+        }
+      ]
+    },
+
+    {
+      "id": "sec_contact",
+      "elType": "section",
+      "isInner": false,
+      "settings": {
+        "css_classes": "ax-section ax-contact",
+        "custom_id": "contact",
+        "content_width": "full",
+        "padding": { "unit": "px", "top": "0", "right": "0", "bottom": "0", "left": "0", "isLinked": true }
+      },
+      "elements": [
+        {
+          "id": "col_contact",
+          "elType": "column",
+          "settings": {
+            "_column_size": 100,
+            "_inline_size": null,
+            "padding": { "unit": "px", "top": "0", "right": "0", "bottom": "0", "left": "0", "isLinked": true }
+          },
+          "elements": [
+            {
+              "id": "wgt_contact",
+              "elType": "widget",
+              "widgetType": "html",
+              "settings": {
+                "html": "<div class=\"ax-container ax-contact-inner\"><div class=\"ax-contact-copy\"><p class=\"ax-eyebrow\">Get In Touch</p><h2>Let’s Build Something Better Together</h2><p>Tell us about your business. A real human will reach out within one business day.</p><ul class=\"ax-contact-info\"><li><strong>Phone:</strong> <a href=\"tel:+18559829466\">(855) 982-9466</a></li><li><strong>Email:</strong> <a href=\"mailto:customercare@axionco.com\">customercare@axionco.com</a></li><li><strong>Address:</strong> 663 Cochran ST #100, Simi Valley, CA 93065</li></ul></div><form class=\"ax-form\" action=\"#\" method=\"post\"><div class=\"ax-form-row\"><label>Name <input type=\"text\" name=\"name\" required></label><label>Email <input type=\"email\" name=\"email\" required></label></div><div class=\"ax-form-row\"><label>Phone <input type=\"tel\" name=\"phone\"></label><label>State <input type=\"text\" name=\"state\"></label></div><label class=\"ax-form-block\">Message <textarea name=\"message\" rows=\"4\"></textarea></label><label class=\"ax-form-check\"><input type=\"checkbox\" name=\"newsletter\" checked> Subscribe me to the newsletter</label><button type=\"submit\" class=\"ax-btn ax-btn-primary ax-btn-lg\">Send Message</button></form></div>"
+              }
+            }
+          ]
+        }
+      ]
+    }
+
+  ],
+  "page_settings": {
+    "hide_title": true
+  }
+}
